@@ -13,7 +13,7 @@ function UsersDAO(db){
     }
 
     this.validateLogin = function(email, password, callback){
-	users.findOne('_id': email, validateUserDoc(err, doc){
+	users.findOne({'_id': email}, function(err, doc){
 		if(err){
 		    return callback(err, null);
 		}

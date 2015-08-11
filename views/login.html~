@@ -1,4 +1,14 @@
+<!DOCTYPE html>
 <html>
-<form>
-Email Address
+  <body>
+    <h2>Login</h2>
+    <form  method:"POST">
+      Email Address:<br>
+      <input type:"text" name = "email">
+      <br>
+      Password:<br>
+      <input type:"text" name = "password">
+      <input type:"submit" name = "submit to sign in">
+    </form>
+</body>
 </html>

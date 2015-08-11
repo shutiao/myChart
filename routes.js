@@ -1,4 +1,4 @@
-var SessionHandler = require('./session');
+var SessionHandler = require('./routes/session.js');
 
 function routes(app, db){
     var sessionHandler = new SessionHandler(db);

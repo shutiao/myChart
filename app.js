@@ -4,7 +4,8 @@ var express = require('express')
     , app = express()
     // consolidate is a set of wrapper for a number of template library for express   
     , cons = require('consolidate')
-    , MongoClient = require('mongodb').MongoClient;
+    , MongoClient = require('mongodb').MongoClient
+    , routes = require('./routes.js');
 
 MongoClient.connect('mongodb://localhost:27017/test', function(err, db){
 	"use strict";
@@ -17,7 +18,9 @@ MongoClient.connect('mongodb://localhost:27017/test', function(err, db){
 	// set the directory for the application's view
 	app.set('views',process.cwd() + "/views");
 	app.set('port', (process.env.PORT || 8080));
+	app.use(express.bodyParser());
 	// register a handle for the routes
+	/*
 	app.get('/', function(req, res1){
 		//res.send("Hello, World!");
 		db.collection('helloworld').findOne({}, function(err, doc){
@@ -27,6 +30,10 @@ MongoClient.connect('mongodb://localhost:27017/test', function(err, db){
 	app.get('*', function(req1, res){
 		res.send("Page not found", 404);
 	    });
+	
+	*/
+	routes(app, db);
+
 	app.listen(app.get('port'));
 	console.log("Exress server started on port 8080");
     });

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
   <body>
-  
-    <form>
+    <h2>Login</h2>
+    {{login_error}}
+    <form  method:"POST">
       Email Address:<br>
-      <input type:"text" name = "email">
+      <input type:"text" name = "email" value = "{{email}}">
       <br>
       Password:<br>
-      <input type:"text" name = "password">
+      <input type:"text" name = "password" value = "{{password}}">
+      <br><br>
+      <input type:"submit" name = "submit to sign in">
     </form>
-    
 </body>
 </html>
