@@ -15,8 +15,9 @@ function SessionHandler(db){
 		}
 		else{
 		    res.send('Welcome' + email);
-
-			    
-	
+		}
+	    });
+    }
+}
 
 module.exports = SessionHandler;

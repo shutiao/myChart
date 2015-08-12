@@ -7,7 +7,7 @@ var express = require('express')
     , MongoClient = require('mongodb').MongoClient
     , routes = require('./routes.js');
 
-MongoClient.connect('mongodb://localhost:27017/test', function(err, db){
+MongoClient.connect('mongodb://localhost:27017/myChart', function(err, db){
 	"use strict";
 	if(err) throw err;
 

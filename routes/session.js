@@ -1,4 +1,4 @@
-var UsersDAO = require('../dataAccessHelper/users').UsersDAO;
+var UsersDAO = require('../dataAccessHelper/users.js').UsersDAO;
 
 function SessionHandler(db){
     // function is a object
