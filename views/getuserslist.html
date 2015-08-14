@@ -1,0 +1,28 @@
+<!doctype HTML>
+<html>
+  <head><title>Show all users</title></head>
+  <style>
+    table, th, td{
+    border: 1px solid black;
+    }
+  </style>
+  </head>
+  <body>
+    <table border = '1' style = "width:100%">
+      <th>
+	<!-- td>email</td-->
+	<td>password</td>
+	<td>last login time</td>
+      </th>
+      {% for user in users %}
+      <tr>
+	<td>{{user['_id']}}</td>
+	<td>{{user['password']}}</td>
+	{% if user['lastLoginTime'] %}
+	<td>{{user['lastLoginTime']}}</td>
+	{% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
